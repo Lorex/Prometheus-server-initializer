@@ -16,7 +16,7 @@ pause '按任意鍵開始安裝...'
 
 echo [1/6] 安裝 EPEL 中...
 cd /tmp
-wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 1>/dev/null 2> err.txt
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -O epel-release-latest-7.noarch.rpm 2> err.txt
 sudo rpm -i epel-release-latest-7.noarch.rpm 1>/dev/null 2> err.txt
 
 echo [2/6] 更新套件清單中...
