@@ -35,4 +35,9 @@ sh install.sh 1>/dev/null 2>> err.txt
 echo [6/6] 正在切換到 zsh
 chsh -s /bin/zsh 2>> err.txt
 
-echo 安裝完成！
+if [[ -f err.txt ]]; then
+	echo "設定過程中發生錯誤："
+	cat err.txt
+fi
+
+echo 設定完成！
